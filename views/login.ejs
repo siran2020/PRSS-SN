@@ -1,0 +1,33 @@
+<!-- 
+login.ejs
+Sira Nassoko
+January 24, 2020
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>P,R,S - Index</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+  <% include global/header %>
+
+  <div id="enter_name">
+    <h2>Welcome to Paper, Rock, Scissors</h2>
+    <form action="/game" method="get">
+      Please enter your name:<input type="text" id="enter_username_input" name="username">
+      <br>
+      Please enter your password:<input type="text" id="enter_password_input" name="password">
+      <br>
+      <button type="submit" id="enter_name_button">Submit Name</button>
+    </form>
+  </div>
+  <% include global/footer %>
+
+  <script src="scripts/scripts.js"></script>
+</body>
+
+</html>

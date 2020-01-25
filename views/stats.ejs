@@ -1,0 +1,69 @@
+<!--
+stats.ejs
+Sira Nassoko
+January 24, 2020
+*/
+
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>P,R,S - Stats</title>
+  <link rel="stylesheet" href="styles/style.css">
+ </head>
+<body>
+  <% include global/header %>
+
+  <div id="stats">
+    <h2>Showdown Statistics</h2>
+    <table>
+      <tr>
+        <th class="top_row">Player Name</th>
+        <th class="top_row">Games Won %</th>
+        <th class="top_row">Games Lost %</th>
+        <th class="top_row">Games Tied %</th>
+      </tr>
+      <tr>
+        <% for (var i=0; i < data.users.length; i++) {%>
+        <th> <%=data.users[i].name%></th>
+        <td> <%=data.users[i].games_won%></td>
+        <td> <%=data.users[i].games_lost%></td>
+        <td> <%=data.users[i].games_tied%></td>
+      </tr>
+    <%  if(i < data.users.length - 1) { %>
+        <tr>
+      <%}%>
+       <%}%>
+    </table>
+
+    <table>
+      <tr>
+        <th class="top_row">Villian Name</th>
+        <th class="top_row">Games Won %</th>
+        <th class="top_row">Games Lost %</th>
+        <th class="top_row">Games Tied %</th>
+      </tr>
+      <tr>
+
+
+    <% for (var i=0; i < data.villains.length; i++) { %>
+        <th> <%=data.villains[i].name%></th>
+        <td> <%=data.villains[i].wins%></td>
+        <td> <%=data.villains[i].losses%></td>
+        <td> <%=data.villains[i].ties%></td>
+      </tr>
+      <%  if (i < data.villains.length - 1) { %>
+          <tr>
+        <% } %>
+    <% } %>
+
+
+    </table>
+  </div>
+
+
+  <% include global/footer %>
+
+  <script src="scripts/scripts.js"></script>
+ </body>
+</html>

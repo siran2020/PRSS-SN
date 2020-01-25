@@ -1,0 +1,56 @@
+<!--
+results.ejs
+Sira Nassoko
+January 24, 2020
+The images for villains with a space in their name does not work.
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>P,R,S - Results</title>
+    <link rel="stylesheet" href="../styles/style.css">
+  </head>
+  <body>
+    <% include global/header %>
+
+  <div id="results">
+    <h2> <%= user.name %> vs. <%= villain.name %> Results</h2>
+    <img id="user_image" src="/images/user_<%=user.weapon.toLowerCase()%>.png" width="200px">
+    <p>You have chosen: <%= user.weapon %></p>
+    <img id="villain_image" src="/images/<%=villain.name.toLowerCase()%>_<%=villain.weapon.toLowerCase()%>.svg">
+    <p><%= villain.name %> chose: <%= villain.weapon %>
+      <br>
+      <%= user.game %>
+      <br>
+      <%= villain.name %> now has <%= villain.wins %> wins and <%= villain.losses %> losses.
+      <br>
+      <%= user.name %> now has <%= user.wins %> wins and <%= user.losses %> losses.</p>
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Games Won</th>
+          <th>Games Lost</th>
+          <th>Games Tied</th>
+        </tr>
+        <tr>
+          <td><%= user.name %></td>
+          <td><%= user.wins %></td>
+          <td><%= user.losses %></td>
+          <td><%= user.ties %></td>
+        </tr>
+
+        <tr>
+          <td><%= villain.name %></td>
+          <td><%= villain.wins %></td>
+          <td><%= villain.losses %></td>
+          <td><%= villain.ties %></td>
+        </tr>
+      </table>
+  </div>
+
+  <% include global/footer %>
+
+  <script src="../scripts/scripts.js"></script>
+  </body>
+</html>

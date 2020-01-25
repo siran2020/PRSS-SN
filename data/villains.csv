@@ -1,0 +1,13 @@
+name,paper,rock,scissors,paper_strategy,rock_strategy,scissors_strategy,wins,losses
+Bones,3,4,3,0.33,0.33,0.33,3,3
+Comic Hans,3,1,6,0.9,0.01,0.09,6,4
+Gato,6,1,3,0.33,0.33,0.33,3,7
+Harry,3,3,4,0.33,0.33,0.33,5,5
+Manny,1,5,4,0.33,0.33,0.33,1,9
+Mickey,3,5,2,0.33,0.33,0.33,9,1
+Mr. Modern,7,1,2,0.33,0.33,0.33,1,6
+Pixie,6,2,2,0.33,0.33,0.33,4,6
+Regal,3,4,3,0.1,0.45,0.45,8,2
+Spock,4,5,1,0.2,0.2,0.6,3,7
+The Boss,1,1,8,0.1,0.8,0.1,4,6
+The Magician,2,4,4,0.33,0.33,0.33,2,7

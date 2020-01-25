@@ -1,0 +1,70 @@
+<!--
+game.ejs
+Sira Nassoko
+January 24, 2020
+-->
+<!DOCTYPE html>
+<html>
+<!--
+1. Dynamic Villan Dropdown (done)
+2. Dynamic Waiting Picture for villain Choice
+3. Send choice to server (done)
+-->
+<head>
+  <title>P,R,S - Game</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+
+  <% include global/header %>
+
+
+</div id="weapon_dropdown_section">
+  <div id="throw_choice">
+    <h2>Play the Game</h2>
+    <h4><%=user.name%> it's your turn to bust a move!</h4>
+    <form action="<%=user.name%>/game" method="post">
+      <div id="user_dropdown_section">
+
+  <img id="user_image" src="" width="200px">
+      Enter your choice of weapon:<br>
+      <select id="player_weapon" name="weapon">
+        <option value=" "> </option>
+        <option value="Paper">Paper</option>
+        <option value="Rock">Rock</option>
+        <option value="Scissors">Scissors</option>
+      </select>
+</div>
+
+<div id="villain_dropdown_section">
+
+  <img id="villain_image" src="">
+      <br>Enter your choice of Villian:<br>
+      <select name="villain_name" id="villain_dropdown">
+        <option value=" "></option>
+        <% for (i=0; i < data.villains.length; i++) { %>
+          <option id="villain_name" value="<%=data.villains[i].name%>">
+            <%= data.villains[i].name %>
+          </option>
+
+        <% } %>
+      </select>
+
+      <p id="villain_description" value="">
+         Villain description will display here.
+      </p>
+
+  </div>
+      <button type="submit">Shoot!</button>
+
+    </form>
+
+  </div>
+  <% include global/footer %>
+  <script src="/scripts/scripts.js"></script>
+
+</body>
+
+</html>
